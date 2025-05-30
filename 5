@@ -1,0 +1,26 @@
+fig, axs = plt.subplots(3, 1, figsize=(8, 12))  # 3 строки, 1 столбец  # Создание фигуры с 3 областями
+
+
+x = np.linspace(0, 10, 100) # Линейный график y = x^2
+y = x ** 2
+axs[0].plot(x, y, color='red')
+axs[0].set_title('Линейный график y = x^2')
+axs[0].set_xlabel('x')
+axs[0].set_ylabel('y')
+
+x_random = np.random.rand(50) # Точечный график случайных точек
+y_random = np.random.rand(50)
+axs[1].scatter(x_random, y_random, color='green')
+axs[1].set_title('Точечный график случайных точек')
+axs[1].set_xlabel('x')
+axs[1].set_ylabel('y')
+
+categories = ['A', 'B', 'C'] # Столбчатая диаграмма для категориальных данных
+values = [3, 7, 2]
+axs[2].bar(categories, values, color='blue')
+axs[2].set_title('Столбчатая диаграмма')
+axs[2].set_xlabel('Категории')
+axs[2].set_ylabel('Значения')
+
+plt.tight_layout()  # Подгоняем макет
+plt.show()  # Отображаем все графики
