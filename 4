@@ -1,0 +1,9 @@
+plt.figure(figsize=(8, 6)) # Построение тепловой карты
+plt.imshow(matrix, cmap='hot', interpolation='nearest')  # Используем цветовую карту 'hot'
+plt.colorbar()  # Добавляем цветовую шкалу
+
+for (i, j), val in np.ndenumerate(matrix): # Аннотации чисел в ячейках
+    plt.text(j, i, val, ha='center', va='center', color='white')
+
+plt.title('Тепловая карта матрицы 5x5') 
+plt.show()  # Отображаем тепловую карту
