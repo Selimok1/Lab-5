@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100) # Генерируем массив x от 0 до 10 с 100 точками
+
+y = np.sin(x) # Рассчитываем y и z
+z = np.cos(x)
+
+plt.figure(figsize=(10, 5))  # Устанавливаем размер графика
+plt.plot(x, y, label='sin(x)')  # Линейный график y = sin(x)
+plt.plot(x, z, label='cos(x)')  # Линейный график z = cos(x)
+
+# Добавляем легенду, подписи осей и заголовок
+plt.title('Графики sin(x) и cos(x)')
+plt.xlabel('x')
+plt.ylabel('y и z')
+plt.legend()
+plt.grid()
+plt.show()  # Отображаем график
